@@ -23,6 +23,7 @@ async function getWallet(secretKeyArray) {
 async function getKeyPair(privateKeyArray) {
     try {
         const secretKey = Uint8Array.from(privateKeyArray);
+        // console.log(Keypair.fromSecretKey(secretKey));
         return Keypair.fromSecretKey(secretKey);
     } catch (error) {
         console.error("Error getting keypair from private key:", error);
